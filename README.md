@@ -46,10 +46,10 @@ npm init @eslint/config
 - How would you like to define a style for your project?  **Ans:** How would you like to define a style for your project?
 - What format do you want your config file to be in?  **Ans:** JSON
 - What style of indentation do you use?  **Ans:** Spaces
-- What quotes do you use for strings?  **Ans** Single
-- What line endings do you use?  **Ans** Unix
-- Do you require semicolons?  **Ans** Yes
-- Would you like to install them now with npm?  **Ans** Yes
+- What quotes do you use for strings?  **Ans:** Single
+- What line endings do you use?  **Ans:** Unix
+- Do you require semicolons?  **Ans:** Yes
+- Would you like to install them now with npm?  **Ans:** Yes
 
 <img src="Readme_file/Install_eslint.PNG" alt="Line Feed" width="700">
 
