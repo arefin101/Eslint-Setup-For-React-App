@@ -115,7 +115,7 @@ Answer This Questions:
 }
 ```
 
-- create new files inside the project root folder called '.eslintignore'
+- create new file inside the project root folder called '.eslintignore'
 - write below lines inside .eslintignore file
 
 ```txt
