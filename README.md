@@ -1,6 +1,6 @@
 ### Create React App
 
-Open terminal and 'cd' into the folder where you want your project to reside & enter the below command in your terminal:
+Open **terminal** and 'cd' into the folder where you want your project to reside & enter the below command in your terminal:
 
 ```bash
 npx create-react-app new-react-project
@@ -13,7 +13,7 @@ This will create a new folder called "new-react-project" and install everything 
 ### Settings
 
 Edit the VS Code settings.json file by simply go to File **>** Preferences **>** Settings **>** Workspace **>** Open Settings (JSON)
-Then Copy and Paste bellow code
+Then **Copy and Paste bellow code**
 
 ```json
 {
@@ -30,8 +30,8 @@ Then Copy and Paste bellow code
 
 ## Linting and auto Formatting Setup
 
-- Open **terminal** and cd into the project directory
-- enter below command
+- Open **terminal** and **cd into the project directory**
+- **enter below command**
 
 ```bash
 npm init @eslint/config
@@ -55,7 +55,7 @@ npm init @eslint/config
 
 
 - Open **package.json** file
-- Add lint and lint-fix properties in **scripts** object
+- Add **lint , lint-fix** properties in **scripts** object
 
 ```json
 "scripts": {
@@ -65,7 +65,7 @@ npm init @eslint/config
 ```
 
 - Open **.eslintrc.json** file
-- Delete code then Copy and Paste bellow code
+- **Delete code then Copy and Paste bellow code**
 
 ```json
 {
@@ -115,7 +115,7 @@ npm init @eslint/config
 }
 ```
 
-- create **new file** inside the project root folder called '.eslintignore'
+- create new file inside the project root folder called '.eslintignore'
 - write below lines inside **.eslintignore** file
 
 ```txt
