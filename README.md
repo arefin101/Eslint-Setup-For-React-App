@@ -24,9 +24,9 @@ Then Copy and Paste bellow code
 }
 ```
 
-<img src="settings.PNG" alt="Line Feed" width="700">
+<img src="Readme_file/settings.PNG" alt="Line Feed" width="700">
 
-<img src="Settings_JSON_file.PNG" alt="Line Feed" width="700">
+<img src="Readme_file/Settings_JSON_file.PNG" alt="Line Feed" width="700">
 
 ## Linting and auto Formatting Setup
 
@@ -51,7 +51,7 @@ Answer This Questions:
 - Do you require semicolons?  **Ans** Yes
 - Would you like to install them now with npm?  **Ans** Yes
 
-<img src="Install_eslint.PNG" alt="Line Feed" width="700">
+<img src="Readme_file/Install_eslint.PNG" alt="Line Feed" width="700">
 
 
 - Open package.json file
