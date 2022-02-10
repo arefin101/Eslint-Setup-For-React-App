@@ -12,7 +12,7 @@ This will create a new folder called "new-react-project" and install everything 
 
 ### Settings
 
-Edit the VS Code settings.json file by simply go to File > Preferences > Settings > Workspace > Open Settings (JSON)
+Edit the VS Code settings.json file by simply go to File **>** Preferences **>** Settings **>** Workspace **>** Open Settings (JSON)
 Then Copy and Paste bellow code
 
 ```json
@@ -30,14 +30,14 @@ Then Copy and Paste bellow code
 
 ## Linting and auto Formatting Setup
 
-- Open terminal and cd into the project directory
+- Open **terminal** and cd into the project directory
 - enter below command
 
 ```bash
 npm init @eslint/config
 ```
 
-Answer This Questions:
+**Answer This Questions:**
 - How would you like to use ESLint?  **Ans:** To check syntax, find problems, and enforce code style
 - What type of modules does your project use?  **Ans:** JavaScript modules (import/export)
 - Which framework does your project use?  **Ans:** React
@@ -54,8 +54,8 @@ Answer This Questions:
 <img src="Readme_file/Install_eslint.PNG" alt="Line Feed" width="700">
 
 
-- Open package.json file
-- Add lint and lint-fix properties in scripts object
+- Open **package.json** file
+- Add lint and lint-fix properties in **scripts** object
 
 ```json
 "scripts": {
@@ -64,8 +64,8 @@ Answer This Questions:
   },
 ```
 
-- Open .eslintrc.json file
-- Copy and Paste bellow code
+- Open **.eslintrc.json** file
+- Delete code then Copy and Paste bellow code
 
 ```json
 {
@@ -115,15 +115,15 @@ Answer This Questions:
 }
 ```
 
-- create new file inside the project root folder called '.eslintignore'
-- write below lines inside .eslintignore file
+- create **new file** inside the project root folder called '.eslintignore'
+- write below lines inside **.eslintignore** file
 
 ```txt
 src/setupTests.js
 public/*
 ```
 
-- Open terminal and cd into the project directory
+- Open **terminal** and cd into the project directory
 - Enter below command
 
 ```bash
@@ -135,4 +135,8 @@ npm run lint
 ```bash
 npm run lint-fix
 ```
+
+- **Edit Something and wait for sometime for complete setup**...
+
+**Thank You**
 
