@@ -17,7 +17,6 @@ Then **Copy and Paste bellow code**
 
 ```json
 {
-    // config related to code formatting
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "[javascript]": {
@@ -28,14 +27,13 @@ Then **Copy and Paste bellow code**
       "editor.formatOnSave": false,
       "editor.defaultFormatter": null
     },
-    "javascript.validate.enable": false, //disable all built-in syntax checking
+    "javascript.validate.enable": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
       "source.fixAll.tslint": true,
       "source.organizeImports": true
     },
     "eslint.alwaysShowStatus": true,
-    // emmet
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
       "javascript": "javascriptreact"
@@ -49,18 +47,11 @@ Then **Copy and Paste bellow code**
 
 ## Linting Setup
 
-In order to lint and format your React project automatically according to popular airbnb style guide, Follow the instructions below.
+In order to lint and format your React project automatically according to popular **airbnb style guide**, Follow the instructions below.
 
 ### Install Dev Dependencies
 
-```sh
-yarn add -D prettier
-yarn add -D babel-eslint
-npx install-peerdeps --dev eslint-config-airbnb
-yarn add -D eslint-config-prettier eslint-plugin-prettier
-```
-
-or You can also add a new script in the scripts section like below to install everything with a single command:
+- Add a new script in the scripts section like below to install everything with a single command:
 
 ```json
 scripts: {
