@@ -1,138 +1,136 @@
 ### Create React App
 
-Open terminal and 'cd' into the folder where you want your project to reside & enter the below command in your terminal:
+Open **terminal** and 'cd' into the folder where you want your project to reside & enter the below command in your terminal:
 
 ```bash
-npx create-react-app new-react-project
+npx create-react-app new-react-app
 ```
 
-This will create a new folder called "new-react-project" and install everything required to start a new react application.
+This will create a new folder called "new-react-app" and install everything required to start a new react application.
 
 ## Editor Setup
 
 ### Settings
 
-Edit the VS Code settings.json file by simply go to File > Preferences > Settings > Workspace > Open Settings (JSON)
-Then Copy and Paste bellow code
+Edit the VS Code settings.json file by simply go to File **>** Preferences **>** Settings **>** Workspace **>** Open Settings (JSON)
+Then **Copy and Paste bellow code**
 
 ```json
 {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.formatOnSave": false,
+      "editor.defaultFormatter": null
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": false,
+      "editor.defaultFormatter": null
+    },
+    "javascript.validate.enable": false,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+      "source.fixAll.eslint": true,
+      "source.fixAll.tslint": true,
+      "source.organizeImports": true
     },
-    "eslint.validate": ["javascript"]
-}
-```
-
-<img src="settings.PNG" alt="Line Feed" width="700">
-
-<img src="Settings_JSON_file.PNG" alt="Line Feed" width="700">
-
-## Linting and auto Formatting Setup
-
-- Open terminal and cd into the project directory
-- enter below command
-
-```bash
-npm init @eslint/config
-```
-
-Answer This Questions:
-- How would you like to use ESLint?  **Ans:** To check syntax, find problems, and enforce code style
-- What type of modules does your project use?  **Ans:** JavaScript modules (import/export)
-- Which framework does your project use?  **Ans:** React
-- Does your project use TypeScript?  **Ans:** No
-- Where does your code run?  **Ans:** Browser
-- How would you like to define a style for your project?  **Ans:** How would you like to define a style for your project?
-- What format do you want your config file to be in?  **Ans:** JSON
-- What style of indentation do you use?  **Ans:** Spaces
-- What quotes do you use for strings?  **Ans** Single
-- What line endings do you use?  **Ans** Unix
-- Do you require semicolons?  **Ans** Yes
-- Would you like to install them now with npm?  **Ans** Yes
-
-<img src="Install_eslint.PNG" alt="Line Feed" width="700">
-
-
-- Open package.json file
-- Add lint and lint-fix properties in scripts object
-
-```json
-"scripts": {
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --fix"
-  },
-```
-
-- Open .eslintrc.json file
-- Copy and Paste bellow code
-
-```json
-{
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest":true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "settings": {
-        "react": {
-            "version": "latest"
-        }
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+    "eslint.alwaysShowStatus": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
     }
+  }
+```
+
+<img src="Readme_file/settings.PNG" alt="Line Feed" width="700">
+
+<img src="Readme_file/Settings_JSON_file.PNG" alt="Line Feed" width="700">
+
+## Linting Setup
+
+In order to lint and format your React project automatically according to popular **airbnb style guide**, Follow the instructions below.
+
+### Install Dev Dependencies
+
+- Add a new script in the scripts section like below to install everything with a single command:
+
+```json
+scripts: {
+    "lint": "yarn add -D prettier && yarn add -D babel-eslint && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
 }
 ```
 
-- create new file inside the project root folder called '.eslintignore'
-- write below lines inside .eslintignore file
+run the below command in the terminal -
 
-```txt
-src/setupTests.js
-public/*
-```
-
-- Open terminal and cd into the project directory
-- Enter below command
-
-```bash
+```sh
 npm run lint
 ```
+- In package.json, update the line "babel-eslint": "^10.0.2", to "@babel/eslint-parser": "^7.5.4",. This works with the code above but it may be better to use the latest version, which at the time of writing is 7.16.3.
 
-- When the above one finishes, enter the below command
 
-```bash
-npm run lint-fix
+run the below command in the terminal -
+```sh
+npm i
 ```
+
+### Create Linting Configuration file manually
+
+Create a `.eslintrc` file in the project root and enter the below contents:
+
+```json
+{
+    "extends": [
+      "airbnb",
+      "airbnb/hooks",
+      "eslint:recommended",
+      "prettier",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "requireConfigFile": false,
+      "babelOptions": {
+        "presets": ["@babel/preset-react"]
+     }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "react/react-in-jsx-scope": 0,
+      "react-hooks/rules-of-hooks": "error",
+      "no-console": 0,
+      "react/state-in-constructor": 0,
+      "indent": 0,
+      "linebreak-style": 0,
+      "react/prop-types": 0,
+      "jsx-a11y/click-events-have-key-events": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".js", ".jsx"]
+        }
+      ],
+      "prettier/prettier": [
+        "error",
+        {
+          "trailingComma": "es5",
+          "singleQuote": true,
+          "printWidth": 100,
+          "tabWidth": 4,
+          "semi": true,
+          "endOfLine": "auto"
+        }
+      ]
+    },
+    "plugins": ["prettier", "react", "react-hooks"]
+  }
+```
+
+- **Edit Something and wait for sometime for complete setup**...
+
+**Thank You**
 
