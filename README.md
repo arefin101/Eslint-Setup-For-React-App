@@ -49,7 +49,7 @@ Then **Copy and Paste bellow code**
 
 ## Linting Setup
 
-In order to lint and format your React project automatically according to popular airbnb style guide, I recommend you to follow the instructions below.
+In order to lint and format your React project automatically according to popular airbnb style guide, Follow the instructions below.
 
 ### Install Dev Dependencies
 
@@ -68,14 +68,15 @@ scripts: {
 }
 ```
 
-and then simply run the below command in the terminal -
+run the below command in the terminal -
 
 ```sh
-yarn lint #or 'npm run lint'
+npm run lint
 ```
 - In package.json, update the line "babel-eslint": "^10.0.2", to "@babel/eslint-parser": "^7.5.4",. This works with the code above but it may be better to use the latest version, which at the time of writing is 7.16.3.
 
-and then simply run the below command in the terminal -
+
+run the below command in the terminal -
 ```sh
 npm i
 ```
