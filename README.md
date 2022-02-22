@@ -51,6 +51,7 @@ In order to lint and format your React project automatically according to popula
 
 ### Install Dev Dependencies
 
+- Go to Package.json
 - Add a new script in the scripts section like below to install everything with a single command:
 
 ```json
